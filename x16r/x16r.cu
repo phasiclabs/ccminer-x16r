@@ -438,9 +438,7 @@ extern "C" int scanhash_x16r(int thr_id, struct work* work, uint32_t max_nonce, 
 			sub_thr.id = i;
 			sub_thr.thr_id = thr_id;
 			sub_thr.exit_thread = false;
-			sub_thr.cond = PTHREAD_COND_INITIALIZER;
-			sub_thr.mutex = PTHREAD_MUTEX_INITIALIZER;
-
+	
 			int ret = pthread_mutex_init(&sub_thr.mutex, NULL);
 
 			if (ret != 0)
