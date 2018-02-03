@@ -298,7 +298,6 @@ static void *scanhash_cpufallback_thread(void *userdata)
 
 			if (work_restart[subthread.thr_id].restart)
 			{
-				gpulog(LOG_WARNING, subthread.thr_id, "work_restart %d", subthread.id);
 				break;
 			}
         }
