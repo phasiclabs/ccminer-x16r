@@ -48,6 +48,11 @@ extern void whirlpool512_setBlock_80_sm3(void *pdata, const void *ptarget);
 extern void whirlpool512_hash_80_sm3(int thr_id, uint32_t threads, uint32_t startNounce, uint32_t *d_outputHash, int order);
 extern void whirlpool512_free_sm3(int thr_id);
 
+extern void x16r_echo512_cpu_init(int thr_id, uint32_t threads);
+extern void x16r_echo512_cpu_setBlock_80(void *pdata);
+extern void x16r_echo512_cpu_hash_64(int thr_id, uint32_t threads, uint32_t startNounce, uint32_t *d_nonceVector, uint32_t *d_hash, int order);
+extern void x16r_echo512_cpu_hash_80(int thr_id, uint32_t threads, uint32_t startNonce, uint32_t *d_hash, int order);
+
 extern void x17_sha512_cpu_init(int thr_id, uint32_t threads);
 extern void x17_sha512_cpu_hash_64(int thr_id, uint32_t threads, uint32_t startNounce, uint32_t *d_hash);
 extern void x17_sha512_setBlock_80(int thr_id, uint32_t *endiandata);
